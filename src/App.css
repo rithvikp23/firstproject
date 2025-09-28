@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(10,12,18,0.85);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+/* Minimal styles for Dino game */
+.App { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.dino-overlay { position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; padding: 20px; }
+
+.dino-overlay > div { width: 100%; max-width: 980px; box-sizing: border-box; }
+.dino-overlay canvas { width: 100%; height: auto; display: block; }
+
+/* Centered start screen */
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #2b6f5a;
+  text-transform: capitalize;
+}
+
+/* plain button now intentionally unstyled in App — the browser default is used */

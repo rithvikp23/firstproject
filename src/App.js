@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import DinoGame from './DinoGame';
 
 function App() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!open && (
+        <div className="center-screen">
+          <h1 className="game-title">my first game</h1>
+          <button onClick={() => setOpen(true)}>click here to play</button>
+        </div>
+      )}
+
+      <DinoGame visible={open} onClose={() => setOpen(false)} />
     </div>
   );
 }
